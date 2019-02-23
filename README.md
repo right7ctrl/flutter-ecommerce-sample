@@ -2,6 +2,8 @@
 
 A new Flutter project.
 
+<img src="https://github.com/godlessturtle/flutter-ecommerce-sample/blob/master/app.PNG">
+
 ## Getting Started
 
 This project is a starting point for a Flutter application.
