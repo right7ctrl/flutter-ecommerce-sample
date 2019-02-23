@@ -3,7 +3,7 @@
 * 23.02.2019
 * */
 import 'package:flutter/material.dart';
-
+import 'widgets/half_category_widget.dart';
 void main() => runApp(MaterialApp(
       debugShowCheckedModeBanner: false,
       theme: ThemeData.light(),
@@ -86,63 +86,9 @@ class _FirstAppState extends State<FirstApp> {
                         width: 100.0,
                         child: Column(
                           children: <Widget>[
-                            Expanded(
-                              child: Padding(
-                                padding: const EdgeInsets.only(
-                                    bottom: 4.0, right: 1.0),
-                                child: Container(
-                                    decoration: BoxDecoration(
-                                        borderRadius:
-                                            BorderRadius.circular(4.0),
-                                        color: Colors.lightGreen),
-                                    child: Row(
-                                      mainAxisAlignment:
-                                          MainAxisAlignment.center,
-                                      children: <Widget>[
-                                        Icon(
-                                          Icons.directions_car,
-                                          color: Colors.white,
-                                          size: 22.0,
-                                        ),
-                                        Text(
-                                          " Cars",
-                                          style: TextStyle(
-                                              fontWeight: FontWeight.bold,
-                                              fontSize: 18.0,
-                                              color: Colors.white),
-                                        )
-                                      ],
-                                    )),
-                              ),
-                            ),
-                            Expanded(
-                              child: Padding(
-                                padding:
-                                    const EdgeInsets.only(top: 4.0, right: 1.0),
-                                child: Container(
-                                    decoration: BoxDecoration(
-                                        borderRadius:
-                                            BorderRadius.circular(4.0),
-                                        color: Colors.red),
-                                    child: Row(
-                                      mainAxisAlignment:
-                                          MainAxisAlignment.center,
-                                      children: <Widget>[
-                                        Icon(
-                                          Icons.gamepad,
-                                          color: Colors.white,
-                                        ),
-                                        Text(
-                                          " Test",
-                                          style: TextStyle(
-                                              fontSize: 18.0,
-                                              fontWeight: FontWeight.bold,
-                                              color: Colors.white),
-                                        )
-                                      ],
-                                    )),
-                              ),
-                            ),
+                            HalfCategory(Colors.lightGreen, Icons.card_travel ,"Cars"),
+                            SizedBox(height: 8.0,),
+                            HalfCategory(Colors.red, Icons.card_travel ,"Tech"),
                           ],
                         ),
                       ),
@@ -156,62 +102,9 @@ class _FirstAppState extends State<FirstApp> {
                         width: 100.0,
                         child: Column(
                           children: <Widget>[
-                            Expanded(
-                              child: Padding(
-                                padding: const EdgeInsets.only(
-                                    bottom: 4.0, right: 1.0),
-                                child: Container(
-                                    decoration: BoxDecoration(
-                                        borderRadius:
-                                            BorderRadius.circular(4.0),
-                                        color: Colors.blue),
-                                    child: Row(
-                                      mainAxisAlignment:
-                                          MainAxisAlignment.center,
-                                      children: <Widget>[
-                                        Icon(
-                                          Icons.all_inclusive,
-                                          color: Colors.white,
-                                        ),
-                                        Text(
-                                          " Test",
-                                          style: TextStyle(
-                                              fontWeight: FontWeight.bold,
-                                              fontSize: 18.0,
-                                              color: Colors.white),
-                                        )
-                                      ],
-                                    )),
-                              ),
-                            ),
-                            Expanded(
-                              child: Padding(
-                                padding:
-                                    const EdgeInsets.only(top: 4.0, right: 1.0),
-                                child: Container(
-                                    decoration: BoxDecoration(
-                                        borderRadius:
-                                            BorderRadius.circular(4.0),
-                                        color: Colors.orange),
-                                    child: Row(
-                                      mainAxisAlignment:
-                                          MainAxisAlignment.center,
-                                      children: <Widget>[
-                                        Icon(
-                                          Icons.accessibility,
-                                          color: Colors.white,
-                                        ),
-                                        Text(
-                                          " Test",
-                                          style: TextStyle(
-                                            fontWeight: FontWeight.bold,
-                                              fontSize: 18.0,
-                                              color: Colors.white),
-                                        )
-                                      ],
-                                    )),
-                              ),
-                            ),
+                            HalfCategory(Colors.blue, Icons.all_inclusive, "Gadgets"),
+                            SizedBox(height: 8.0,),
+                            HalfCategory(Colors.orange, Icons.all_inclusive, "Gadgets"),
                           ],
                         ),
                       ),
